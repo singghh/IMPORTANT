@@ -1,0 +1,67 @@
+.sweet-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sweet-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+}
+
+.sweet-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.sweet-category {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+.sweet-price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #16a34a;
+}
+
+.sweet-stock {
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+.in-stock {
+  color: #16a34a;
+}
+
+.out-stock {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.buy-btn {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  background: #4f46e5;
+  color: white;
+}
+
+.buy-btn:hover {
+  background: #4338ca;
+}
+
+.buy-btn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
