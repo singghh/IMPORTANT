@@ -1,9 +1,16 @@
 import { useEffect, useState } from "react";
 import API from "../api/axios";
 import "../styles/admin.css";
+import { useNavigate } from "react-router-dom";
 
 export default function AdminDashboard() {
   const [sweets, setSweets] = useState([]);
+  const navigate = useNavigate();
+
+  const logout = () => {
+    localStorage.removeItem("token");
+    navigate("/login");
+  };
 
   // Form
   const [form, setForm] = useState({
@@ -85,7 +92,12 @@ export default function AdminDashboard() {
 
   return (
     <div className="admin-container">
-      <div className="admin-title">🛠 Admin Panel</div>
+      <div className="admin-header">
+        <div className="admin-title">🛠 Admin Panel</div>
+        <button className="logout-btn" onClick={logout}>
+          Logout
+        </button>
+      </div>
 
       <div className="admin-layout">
         {/* FORM */}
